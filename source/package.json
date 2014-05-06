@@ -1,0 +1,12 @@
+{
+  "name": "FoleyBox",
+  "version": "0.0.0",
+  "main": "index.htm",
+  "window": {
+    "toolbar": true,
+    "width": 800,
+    "height": 500,
+    "min_width": 600,
+    "min_height": 300
+  }
+}
