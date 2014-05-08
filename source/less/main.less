@@ -1,0 +1,25 @@
+@import "../lib/bootstrap/less/bootstrap.less";
+
+@icon-font-path:          "../lib/bootstrap/fonts/";
+@font-size-base:          11px;
+
+@body-bg:                 darken(#3D3784, 25%);
+@text-color:              @gray-lighter;
+
+//** Default background color used for all tables.
+@table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent:               lighten(@body-bg, 10%);
+//** Background color used for `.table-hover`.
+@table-bg-hover:                lighten(@body-bg, 10%);
+@table-bg-active:               @table-bg-hover;
+
+//** Border color for table and cell borders.
+@table-border-color:            lighten(@body-bg, 20%);
+
+//** `<input>` background color
+@input-bg:                      lighten(@body-bg, 10%);
+@input-color:                   @gray-lighter;
+@input-color-placeholder:       darken(@input-color, 10%);
+@input-border:                  lighten(@body-bg, 20%);
+@input-border-focus:            lighten(@body-bg, 45%);
