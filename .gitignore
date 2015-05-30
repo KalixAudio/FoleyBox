@@ -1,2 +1,4 @@
-docs
+/build
+/docs
+/src/vendor/
 node_modules/
