@@ -15,11 +15,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "source/lib",
     "test",
     "tests"
   ],
   "dependencies": {
-    "semantic-ui": "~1.12.3"
+    "bootstrap": "~3.3.4"
   }
 }
