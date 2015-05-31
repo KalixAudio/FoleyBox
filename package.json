@@ -1,12 +1,11 @@
 {
   "name": "FoleyBox",
   "version": "0.1.0",
+  "author": "KalixAudio",
   "description": "Sound file database.",
-  "main": "src/main.js",
-  "scripts": {
-    "postinstall": "bower install",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron ."
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/KalixAudio/FoleyBox/issues"
   },
   "repository": {
     "type": "git",
@@ -22,13 +21,19 @@
     "search",
     "tagging"
   ],
-  "author": "Liam Anderson",
-  "license": "GPL3",
-  "bugs": {
-    "url": "https://github.com/KalixAudio/FoleyBox/issues"
+  "main": "src/main.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron ."
   },
   "devDependencies": {
     "bower": "^1.3.3",
-    "electron-prebuilt": "^0.27.1"
+    "electron-prebuilt": "^0.27.1",
+    "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-notify": "^2.2.0"
   }
 }
