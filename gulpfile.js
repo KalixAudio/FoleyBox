@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var child = require('child_process');
-var livereload = require('gulp-livereload');
+var liveReload = require('gulp-livereload');
 var less = require('gulp-less');
  var notify = require('gulp-notify');
 var bower = require('gulp-bower');
@@ -14,9 +14,9 @@ var config = {
   },
   less: {
     imports: [
-      path.join(__dirname, 'bower_components', 'bootstrap', 'less')
     ],
-    input: 'src/less/main.less',
+    entryPoint: 'src/less/main.less',
+    input: 'src/less/**/*.less',
     output: 'src/css'
   }
 };
@@ -24,19 +24,19 @@ var config = {
 gulp.task('html', function () { 
   return gulp
     .src(config.html.input)
-    .pipe(livereload());
+    .pipe(liveReload());
 });
 
 gulp.task('less', function () { 
   return gulp
-    .src(config.less.input)
+    .src(config.less.entryPoint)
     .pipe(less({paths: config.less.imports}))
     .pipe(gulp.dest(config.less.output))
-    .pipe(livereload());
+    .pipe(liveReload());
 });
 
 gulp.task('watch', function () { 
-  livereload.listen();
+  liveReload.listen();
   gulp.watch(config.less.input, ['less']);
   gulp.watch(config.html.input, ['html']);
 });
@@ -46,4 +46,4 @@ gulp.task('run', function () { 
   child.spawn(electronPath, [__dirname]);
 });
 
-gulp.task('default', ['less', 'watch', 'run']);
+gulp.task('default', ['less', 'html', 'watch', 'run']);

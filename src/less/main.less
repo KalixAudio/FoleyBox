@@ -1,4 +1,25 @@
 // LESS Entry Point
 
-@import "bootstrap.less";
+@import "../../bower_components/bootstrap/less/bootstrap.less";
 @import "variables.less";
+
+// Remove gutter from sides of rows that are direct descendants of the body
+.row [class*='col-']:first-child {
+  padding-left: 0;
+}
+.row [class*='col-']:last-child {
+  padding-right: 0;
+}
+
+// Body
+body {
+  font-weight: @body-font-weight;
+  margin-top: @navbar-height;
+}
+
+// Sidebar
+.sidebar {
+}
+.sidebar h5 {
+  padding: @nav-link-padding;
+}
