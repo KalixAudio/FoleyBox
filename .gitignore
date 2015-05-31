@@ -1,4 +1,7 @@
 /build
 /docs
-/src/vendor/
-node_modules/
+/src/css
+
+bower_components
+node_modules
+
